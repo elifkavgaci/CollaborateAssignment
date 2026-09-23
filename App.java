@@ -94,6 +94,30 @@ public class App {
         }
         System.out.println("}");
     }
+
+    public int findMaximum (arr[] arr){
+        int max = arr[0];
+        for (int i = 0; i < arr.length + 1; i++){
+            int index = arr[i];
+            if(max < index){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    public int findMinimum (arr[] arr){
+        int min = arr[0];
+        for (int i = 0; i < arr.length + 1; i++){
+            int index = arr[i];
+            if(min > index){
+                min = arr[i];
+            }
+        }
+        return max;
+    }
+
+
 }
 
     
