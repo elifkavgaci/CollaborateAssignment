@@ -2,9 +2,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class App {
-
-
-
     public static void main(String[] args) {
 
         // Create a Scanner object to read input from the user
@@ -42,6 +39,7 @@ public class App {
 
             if (choice == 1) {
                 // Implementation for finding max and min values
+        
             } else if (choice == 2) {
                 // Implementation for displaying differences from average
             } else if (choice == 3) {
@@ -53,7 +51,6 @@ public class App {
                 System.out.println("Invalid choice. Please enter a number between 1 and 4.");
             }
         } while(choice != 4);
-
     }
     public static void findSums(int[]arr){
             int even = 0;
@@ -68,32 +65,4 @@ public class App {
             System.out.println("Sum of even numbers: " + even);
             System.out.println("Sum of odd numbers: " + odd);
         }
-
-    public static void FindDiffArr(int[] arr){
-        //first find the average
-        int sum = 0;
-        int avg = 0;
-        for(int i = 0 ; i< arr.length;i++){
-            sum += arr[i];
-        }
-
-        avg = (sum / arr.length);
-
-        int[] differences = new int[arr.length];
-
-        for(int i = 0; i < differences.length; i++){
-            differences[i] = arr[i] - avg;
-        }
-
-        System.out.print("{");
-        for(int i = 0; i < differences.length; i++){
-            System.out.print(differences[i]);
-            if(i != differences.length-1){
-                System.out.print(",");
-            }
-        }
-        System.out.println("}");
-    }
 }
-
-    
