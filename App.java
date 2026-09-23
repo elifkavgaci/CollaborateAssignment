@@ -8,7 +8,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt the user to enter the number of elements in the array
-        System.out.println("Enter the number of elements in the array: ");
+        System.out.print("Enter the number of elements in the array: ");
 
         // Read the number of elements from the user
         int n = scanner.nextInt();
@@ -22,6 +22,10 @@ public class App {
         // Fill the array with random integers between 0 and 100
         for (int i = 0; i < n; i++) {
             array[i] = random.nextInt(101);
+        }
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(array[i] + " ");
         }
 
         int choice;
@@ -39,9 +43,11 @@ public class App {
 
             if (choice == 1) {
                 // Implementation for finding max and min values
-        
+                System.out.println("Maximum value: " + findMaximum(array));
+                System.out.println("Minimum value: " + findMinimum(array));
             } else if (choice == 2) {
                 // Implementation for displaying differences from average
+                FindDiffArr(array);
             } else if (choice == 3) {
                 // Implementation for finding sum of elements with odd and even indexes
                 findSums(array);
@@ -65,9 +71,6 @@ public class App {
             System.out.println("Sum of even numbers: " + even);
             System.out.println("Sum of odd numbers: " + odd);
         }
-<<<<<<< HEAD
-=======
-
     public static void FindDiffArr(int[] arr){
         //first find the average
         int sum = 0;
@@ -94,9 +97,9 @@ public class App {
         System.out.println("}");
     }
 
-    public int findMaximum (arr[] arr){
+    public static int findMaximum (int[] arr){
         int max = arr[0];
-        for (int i = 0; i < arr.length + 1; i++){
+        for (int i = 0; i < arr.length; i++){
             int index = arr[i];
             if(max < index){
                 max = arr[i];
@@ -105,17 +108,14 @@ public class App {
         return max;
     }
 
-    public int findMinimum (arr[] arr){
+    public static int findMinimum (int[] arr){
         int min = arr[0];
-        for (int i = 0; i < arr.length + 1; i++){
+        for (int i = 0; i < arr.length; i++){
             int index = arr[i];
             if(min > index){
                 min = arr[i];
             }
         }
-        return max;
+        return min;
     }
-
-
->>>>>>> origin/main
 }
