@@ -65,4 +65,57 @@ public class App {
             System.out.println("Sum of even numbers: " + even);
             System.out.println("Sum of odd numbers: " + odd);
         }
+<<<<<<< HEAD
+=======
+
+    public static void FindDiffArr(int[] arr){
+        //first find the average
+        int sum = 0;
+        int avg = 0;
+        for(int i = 0 ; i< arr.length;i++){
+            sum += arr[i];
+        }
+
+        avg = (sum / arr.length);
+
+        int[] differences = new int[arr.length];
+
+        for(int i = 0; i < differences.length; i++){
+            differences[i] = arr[i] - avg;
+        }
+
+        System.out.print("{");
+        for(int i = 0; i < differences.length; i++){
+            System.out.print(differences[i]);
+            if(i != differences.length-1){
+                System.out.print(",");
+            }
+        }
+        System.out.println("}");
+    }
+
+    public int findMaximum (arr[] arr){
+        int max = arr[0];
+        for (int i = 0; i < arr.length + 1; i++){
+            int index = arr[i];
+            if(max < index){
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    public int findMinimum (arr[] arr){
+        int min = arr[0];
+        for (int i = 0; i < arr.length + 1; i++){
+            int index = arr[i];
+            if(min > index){
+                min = arr[i];
+            }
+        }
+        return max;
+    }
+
+
+>>>>>>> origin/main
 }
